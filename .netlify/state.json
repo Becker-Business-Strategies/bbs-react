@@ -1,0 +1,21 @@
+{
+	"geolocation": {
+		"data": {
+			"city": "Largo",
+			"country": {
+				"code": "US",
+				"name": "United States"
+			},
+			"subdivision": {
+				"code": "FL",
+				"name": "Florida"
+			},
+			"timezone": "America/New_York",
+			"latitude": 27.9081,
+			"longitude": -82.7552,
+			"postalCode": "33771"
+		},
+		"timestamp": 1771470701011
+	},
+	"siteId": "f44eb464-cfe1-41db-a51a-799276fc3146"
+}
