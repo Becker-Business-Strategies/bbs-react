@@ -1,12 +1,27 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 // src/pages/ClientListPage.tsx
 import { useMemo, useState } from "react";
-import { useClients } from "../hooks/useClients"; // or swap for your own hook/fetch
-import type { Client } from "../types/client";
+// import { useClients } from "../hooks/useClients"; // or swap for your own hook/fetch
+// import type { Client } from "../types/client";
 
-type SelectedClient = Client | null;
+type SelectedClient = any | null;
 
 export default function ClientListPage() {
-  const { data, isLoading, isError } = useClients();
+  const { data, isLoading, isError } = {
+    data: [
+      {
+        _id: "1",
+        name: "John",
+        last: "Doe",
+        email: "john.doe@example.com",
+        phone: "123-456-7890",
+      },
+    ],
+    isLoading: false,
+    isError: false,
+  };
+  // // replace with your data fetching hook
+
   const [filter, setFilter] = useState("");
   const [selectedClient, setSelectedClient] = useState<SelectedClient>(null);
   const [deleteTarget, setDeleteTarget] = useState<SelectedClient>(null);
@@ -23,7 +38,7 @@ export default function ClientListPage() {
     });
   }, [data, filter]);
 
-  const handleDelete = async (client: Client) => {
+  const handleDelete = async (client: SelectedClient) => {
     // TODO: wire to your API: DELETE /api/clients/:id
     // await fetch(`/api/clients/${client._id}`, { method: "DELETE" })
     // then refetch via React Query or manually update state
@@ -179,7 +194,7 @@ export default function ClientListPage() {
 /* -------- Message Dialog -------- */
 
 type MessageDialogProps = {
-  client: Client;
+  client: any;
   onClose: () => void;
 };
 
@@ -247,7 +262,7 @@ function MessageDialog({ client, onClose }: MessageDialogProps) {
 /* -------- Confirm Delete Dialog -------- */
 
 type ConfirmDeleteDialogProps = {
-  client: Client;
+  client: any;
   onCancel: () => void;
   onConfirm: () => void;
 };
