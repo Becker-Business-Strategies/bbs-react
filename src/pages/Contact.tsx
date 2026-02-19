@@ -113,7 +113,7 @@ export default function Contact() {
                     </div>
                   )}
                   <div className="bg-white rounded-xl border border-slate-200 p-8 shadow-lg">
-                    <ContactForm onSubmit={handleContactSubmit} />
+                    <ContactForm />
                   </div>
                 </>
               ) : (

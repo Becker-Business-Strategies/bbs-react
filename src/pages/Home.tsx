@@ -238,7 +238,7 @@ export default function Home() {
                       {submitError}
                     </div>
                   )}
-                  <ContactForm onSubmit={handleContactSubmit} />
+                  <ContactForm />
                 </>
               ) : (
                 <SuccessMessage

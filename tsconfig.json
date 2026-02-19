@@ -1,9 +1,11 @@
 {
   "compilerOptions": {
+    "composite": true,
+    "allowImportingTsExtensions": true,
     "target": "esnext",
     "useDefineForClassFields": true,
-    "module": "nodenext",
-    "moduleResolution": "nodenext",
+    "module": "esnext",
+    "moduleResolution": "bundler",
     "strict": true,
     "jsx": "preserve",
     "resolveJsonModule": true,

@@ -23,16 +23,16 @@ const contactSchema = z.object({
 export type ContactFormValues = z.infer<typeof contactSchema>;
 
 type ContactFormProps = {
-  onSubmit: (values: ContactFormValues) => Promise<void> | void;
+  // onSubmit: (values: ContactFormValues) => Promise<void> | void;
   defaultValues?: Partial<ContactFormValues>;
   /** If true, resets the form after successful submit. Default: true */
   resetOnSubmit?: boolean;
 };
 
 const ContactForm: React.FC<ContactFormProps> = ({
-  onSubmit,
+  // onSubmit,
   defaultValues,
-  resetOnSubmit = true,
+  // resetOnSubmit = true,
 }) => {
   const {
     register,
