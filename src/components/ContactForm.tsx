@@ -36,9 +36,9 @@ const ContactForm: React.FC<ContactFormProps> = ({
 }) => {
   const {
     register,
-    handleSubmit,
+    // handleSubmit,
     formState: { errors, isSubmitting },
-    reset,
+    // reset,
     getValues,
   } = useForm<ContactFormValues>({
     resolver: zodResolver(contactSchema),

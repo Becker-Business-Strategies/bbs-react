@@ -6,7 +6,6 @@ import Carousel from "../components/ui/Carousel";
 import Hero from "../components/Hero";
 import SuccessMessage from "../components/SuccessMessage";
 import { useContactSubmit } from "../hooks/useContactSubmit";
-import type { ContactFormValues } from "../schemas/contact";
 
 type Plank = {
   number: number;
@@ -88,7 +87,7 @@ export default function Home() {
   const [submitError, setSubmitError] = useState<string | null>(null);
 
   const {
-    submit: submitContact,
+    // submit: submitContact,
     status: contactStatus,
     reset: resetContact,
   } = useContactSubmit();
@@ -97,9 +96,9 @@ export default function Home() {
     setMessageSent(true);
   }
 
-  const handleContactSubmit = async (data: ContactFormValues) => {
-    return await submitContact(data);
-  };
+  // const handleContactSubmit = async (data: ContactFormValues) => {
+  //   return await submitContact(data);
+  // };
 
   const companies = [
     { name: "ZZABC Castings Co. Ltd." },

@@ -1,7 +1,7 @@
 // src/pages/Contact.tsx
 import { LinkedinIcon } from "lucide-react";
 import { useState } from "react";
-import ContactForm, { type ContactFormValues } from "../components/ContactForm";
+import ContactForm from "../components/ContactForm";
 import ContactLink from "../components/ContactLink";
 import Hero from "../components/Hero";
 import SectionHeader from "../components/SectionHeader";
@@ -24,7 +24,7 @@ export default function Contact() {
   const [messageSent, setMessageSent] = useState(false);
 
   const {
-    submit: submitContact,
+    // submit: submitContact,
     status: contactStatus,
     error: contactError,
     reset: resetContact,
@@ -34,11 +34,11 @@ export default function Contact() {
     setMessageSent(true);
   }
 
-  const handleContactSubmit = async (
-    data: ContactFormValues,
-  ): Promise<void> => {
-    await submitContact(data);
-  };
+  // const handleContactSubmit = async (
+  //   data: ContactFormValues,
+  // ): Promise<void> => {
+  //   await submitContact(data);
+  // };
 
   return (
     <div className="min-h-screen bg-white">
