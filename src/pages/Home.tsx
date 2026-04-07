@@ -127,6 +127,21 @@ export default function Home() {
       logo: "/logos/nacd.webp",
       link: "https://www.nacdonline.org/",
     },
+    {
+      name: "Wabtech Corporation",
+      logo: "/logos/wabtech.png",
+      link: "https://www.wabteccorp.com/",
+    },
+    {
+      name: "Matrix Metals, LLC",
+      logo: "/logos/matrix.png",
+      link: "https://matrixmetalsglobal.com/",
+    },
+    {
+      name: "Ferroworks LLC",
+      logo: "/logos/ferroworks.png",
+      link: "https://www.ferroworks.com/",
+    },
   ];
 
   return (
@@ -269,12 +284,12 @@ export default function Home() {
                 transform: translateX(0);
               }
               100% {
-                transform: translateX(-50%);
+                transform: translateX(-100%);
               }
             }
             
             .scroll-wrapper {
-              animation: scroll 20s linear infinite;
+              animation: scroll 30s linear infinite;
             }
             
             .scroll-wrapper:hover {
