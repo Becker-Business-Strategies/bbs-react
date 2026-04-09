@@ -101,7 +101,7 @@ export default function Home() {
   // };
 
   const companies = [
-    { name: "ZZABC Castings Co. Ltd." },
+    { name: "ZZABC Castings Co. Ltd.", logo: "/logos/zzabc.png", link: "" },
     {
       name: "Amsted Rail",
       logo: "/logos/amsted.png",
